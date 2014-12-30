@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from SimpleTodo.Task import Task
+from Task.Task import Task
 
 my_task = Task()
 
@@ -12,7 +12,6 @@ date = date or my_task.get_date()
 alarm = input("y/N: ")
 alarm = alarm or "N"
 
-my_task.set_unique_id(id_task)
 my_task.set_desc(desc)
 my_task.set_date(date)
 my_task.set_alarm(alarm)
