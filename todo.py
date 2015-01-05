@@ -2,7 +2,8 @@
 
 from Task.Task import Task
 
-my_task = Task(task_id=3)
+get_task = input()
+my_task = Task(get_task)
 
 #print("Add a task")
 #desc = input("Set Task: ")
@@ -20,7 +21,7 @@ my_task = Task(task_id=3)
 
 #print("List each task stored")
 #print((str(my_task.get_tasks())))
-print("ID: ", my_task.get_unique_id())
+#print("ID: ", my_task.get_unique_id())
 print("Date: ", my_task.get_date())
 print("Desc:", my_task.get_desc())
 print("Alarm: ", my_task.get_alarm())

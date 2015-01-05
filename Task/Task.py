@@ -33,19 +33,19 @@ class Task:
     db = task_db.cursor()
 
     def __init__(self, task_id=None):
-        print("***", task_id)
+
         if (task_id is not None):
             t = self.db.execute(
-                "select id as 'unique_id', date as 'date', desc as 'desc',\
-                alarm as 'alarm' from task where id = ?",
-                task_id
+                "select id, date, desc, alarm from task where id = ?",
+                [task_id]
                 )
-            print(("***", t.fetchone()[0]))
+
+            task_details = t.fetchone()
             self.task = {
-                'unique_id': t.fetchone()['unique_id'],
-                'date': t.fetchone()['date'],
-                'desc': t.fetchone()['desc'],
-                'alarm': t.fetchone()['alarm'],
+                'unique_id': task_details[0],
+                'date': task_details[1],
+                'desc': task_details[2],
+                'alarm': task_details[3],
                 }
         else:
             self.task = {
