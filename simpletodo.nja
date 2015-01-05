@@ -1,0 +1,7 @@
+{
+  "venv": "", 
+  "project-type": "Import from sources", 
+  "name": "SimpleTodo", 
+  "license": "GNU General Public License v3", 
+  "description": "A simple todo list.\nRemember to synch with GIT."
+}
